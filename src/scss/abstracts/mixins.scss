@@ -1,0 +1,18 @@
+@mixin responder($breakpoint){
+    @if $breakpoint == 'xs'{
+        @media only screen and (min-width:0em){@content}
+    }
+    @if $breakpoint == 'sm'{
+        @media only screen and(min-width:37.5em){@content}
+    }
+    @if $breakpoint == 'lg-992'{
+        @media only screen and(min-width:56.25em){@content}
+    }
+    @if $breakpoint == 'xl-1200-800'{
+        @media only screen and(min-width:75em){@content}
+    }
+    @if $breakpoint == 'xl-1260-610'{
+        @media only screen and(min-width:78.75em){@content}
+    }
+  
+}

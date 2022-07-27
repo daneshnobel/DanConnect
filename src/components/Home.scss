@@ -1,0 +1,48 @@
+@import '../scss/abstracts/mixins.scss';
+.layout{
+    &>header{
+        height:7vh;
+        &>nav{
+          background:rgb(89, 181, 206);//#29b3a6;//rgb(89, 181, 206);//#29b3a6;// rgb(89, 181, 206);
+          opacity: 1;
+          & .navbar-brand{
+            display: flex;
+            column-gap: 10px;
+            align-items: center;
+            &>img{
+              @include responder(xl-1200-800){
+                height: 40px;
+                width:40px;
+              }
+            }
+            &>.title{
+              margin:0
+            }
+          }
+        }
+    }
+    &>main{
+        height: 88vh;
+        padding:5rem;
+        
+    }
+    &>footer{
+        height: 5vh;
+    }
+  }
+  
+  .login-icon{
+    border: none;
+    outline: none;
+    background: transparent;
+    cursor: pointer;
+    &>*{
+      transition: all 0.3s ease-in-out;
+    }
+    &:hover{
+      &>*{
+        transform: scale(1.3);
+        
+      }
+    }
+  }

@@ -1,0 +1,24 @@
+@import './abstracts/mixins.scss';
+
+//default font-size 16px
+html{
+    font-size: 62.5%; 
+    //1rem = 16px => 1rem/1em => 10/16 => .625 /* 100 => 62.5
+    @include responder(xs){
+        font-size: 50%; 
+        //1rem = 8px => 8/16 => .50 => 50% 
+    }
+    @include responder(sm){
+        font-size: 56.25%;
+    }
+    @include responder(lg-992){
+        font-size: 62.5%;
+    }
+  
+    @include responder(xl-1200-800){
+        font-size: 75%;
+    }
+    @include responder(xl-1260-610){
+        font-size: 78.75%;
+    }
+}

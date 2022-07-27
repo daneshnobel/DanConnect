@@ -1,0 +1,119 @@
+@import '../scss/abstracts/mixins.scss';
+.public {
+    display: flex;
+    flex-direction: row;
+    padding: 5rem;
+    // width:60%;
+    height: 100%;
+    & > .info {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-basis: 35%;
+        height: 100%;
+        background-image: url("./images/landing-banner-image.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: -750px 0px;
+        
+        @include responder(xl-1200-800){
+            background-position: -800px 0px;
+            flex-basis: 40%;
+        }
+        @include responder(xl-1260-610){
+            background-position: -625px 0px;
+           
+        }
+       
+        & > .title {
+            color: white;
+            font-weight: 500;
+        }
+    }
+    & > .login {
+        flex-basis: 65%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .sign-in {
+        width:50%;
+        height:75%;
+        padding: 5rem 3rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;    
+        flex-direction: column;
+        // flex: 1;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+        & > .logo {
+            border: 0;
+            margin-bottom: 2rem;
+        }
+    }
+
+    h1 {
+        font-size: 3.5rem;
+        margin-bottom: 30px;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        width: 100%;
+    }
+
+    input[type="email"],
+    input[type="password"] {
+        padding: 10px;
+        font-size: 1.2rem;
+        border: none;
+        border-bottom: solid 1px #000;
+        outline: none;
+    }
+
+    input[type="email"]::placeholder,
+    input[type="password"]::placeholder {
+        letter-spacing: 2px;
+        transition: all 0.3s ease;
+    }
+
+    input[type="email"]:hover::placeholder,
+    input[type="password"]:hover::placeholder {
+        color: #000;
+    }
+
+    input[type="submit"] {
+        background-color: #000;
+        color: #fff;
+        padding: 10px;
+        font-size: 1.3rem;
+        cursor: pointer;
+        border: none;
+        transition: all 0.3s ease;
+        border-radius: 15px;
+    }
+
+    input[type="submit"]:hover {
+        background-color: #3ebd6c;
+        color: #fff;
+        font-weight: bold;
+    }
+
+    a {
+        color: #424242;
+        text-decoration: none;
+        align-self: flex-end;
+    }
+
+    a:hover {
+        text-decoration: underline;
+    }
+
+    ::selection {
+        color: #fff;
+        background-color: #000;
+    }
+}
